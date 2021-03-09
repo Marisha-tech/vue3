@@ -8,18 +8,13 @@
     <title>Основы vue</title>
   </head>
   <body>
-    <div class="container" id="app">
-      <div class="card">
-        <h1> {{title}} </h1>
+    <div class="container pt-5" id="app">
+      <div class="card center">
+        <h1>{{title}}: {{counter}}</h1>
         <div>
-         <div class="form-control">
-           <input type="text" v-bind:placeholder="placeholderString " v-bind:value="inputValue"
-           v-on:input="inputChangeHandler"
-           />
-           <h2>inputValue:{{inputValue}} </h2>
-           <button class="btn">Добавить</button>
-           <hr>
-         </div>
+          <button class="btn primary" v-on:click="counter++">Добавить</button>
+          <button class="btn danger" v-on:click="counter--">Вычесть</button>
+        </div>
       </div>
     </div>
 
